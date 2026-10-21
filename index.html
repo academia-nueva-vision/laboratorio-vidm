@@ -1,0 +1,151 @@
+<!-- 
+========================================================================
+PROYECTO: Rediseño Profesional e Ingeniería de Software - Laboratorio Vidm S.A.
+DESARROLLADOR PRINCIPAL: Angel Francisco Patzan Yoc 🚀
+CONTACTO/PORTAFOLIO: crakt28@gmail.com
+ESTADO: Código Abierto, Modularizado con CSS Grid y Flexbox Limpio.
+========================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Vidm S.A. | Rediseño Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Encabezado y Navegación -->
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="logo.jpg" alt="Logo Laboratorio Vidm" class="site-logo">
+            <div class="logo-text">
+                <h1>LABORATORIO VIDM S.A.</h1>
+                <p>Análisis Microbiológicos y Fisicoquímicos para la Industria</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="#analisis">Análisis</a>
+            <a href="quienessomos.html">Quiénes Somos</a>
+           <a href="contactanos.html" class="btn-nav">Contáctanos</a>
+        </nav>
+    </header>
+
+    <!-- 2. Sección Principal (Hero / Banner) -->
+    <section class="hero-banner">
+        <div class="hero-overlay">
+            <h2>Brindando soluciones a tu industria</h2>
+            <p>Servicios confiables con la precisión y calidad que tu empresa necesita.</p>
+            <a href="contactanos.html" class="btn-hero">Solicitar Información</a>
+        </div>
+    </section>
+
+    <!-- Contenedor Principal -->
+    <main class="container">
+        
+        <!-- 3. Sección de Análisis / Servicios -->
+        <section id="analisis" class="section-padding">
+            <h3 class="section-title">Nuestros Servicios de Análisis</h3>
+            <div class="services-grid">
+                
+                                <!-- Tarjeta 1 modificada para redirigir -->
+                <div class="service-card">
+                    <img src="20220314_115254-scaled_002_xgf8.webp" alt="Análisis Microbiológicos">
+                    <div class="card-content">
+                        <h4>Análisis Microbiológicos</h4>
+                        <p>Detección, control y monitoreo de microorganismos claves para asegurar la inocuidad en tus productos industriales.</p>
+                        <!-- AGREGA ESTA LÍNEA DE ABAJO -->
+                        <a href="microbiologia.html" class="btn-card-more" style="display: inline-block; margin-top: 15px; color: #00b4d8; text-decoration: none; font-weight: bold;">Leer más →</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 Modificada -->
+                <div class="service-card">
+                    <img src="20220104_150311-scaled_003_xgf8.webp" alt="Análisis Fisicoquímicos">
+                    <div class="card-content">
+                        <h4>Análisis Fisicoquímicos</h4>
+                        <p>Evaluación detallada de propiedades químicas y físicas bajo estrictos estándares de calidad industrial.</p>
+                        <!-- El botón para ir al nuevo archivo -->
+                        <a href="fisicoquimicos.html" class="btn-card-more" style="display: inline-block; margin-top: 15px; color: #00b4d8; text-decoration: none; font-weight: bold;">Leer más →</a>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="service-card">
+                    <img src="calidad.jpg" alt="Control de Calidad">
+                    <div class="card-content">
+                        <h4>Control de Calidad</h4>
+                        <p>Soluciones analíticas integrales diseñadas a la medida de los procesos de producción de tu empresa.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+           
+        <!-- 5. Sección de Contacto y Ubicación Física -->
+        <section id="contacto" class="section-padding">
+            <h3 class="section-title">Ubicación y Contacto</h3>
+            <div class="contact-grid">
+                            <div class="contact-info">
+                <h4>Dirección</h4>
+                <p>📍 11 avenida 3-39 zona 4, Colonia Monte Real II, Mixco, Guatemala.</p>
+                
+                <h4>Horario</h4>
+                <p>⏰ 07:00 a.m. – 04:00 p.m. (Lunes – Viernes)</p>
+                
+                <h4>Contáctanos</h4>
+                <p>📞 (+502) 4211-7077 / 4211-4425 / 4224-7412</p>
+                    <p>✉️ info@labvidm.com.gt</p>
+                    <p>✉️ ventas@labvidm.com.gt</p>
+
+
+                <!-- Botones de Redes Sociales -->
+                 <div class="social-buttons">
+                    <a href="https://www.facebook.com/profile.php?id=61595421029900" target="_blank" class="social-icon fb">
+                        <img src="facebooklogo.svg" alt="Facebook">
+                    </a>
+                    <a href="https://wa.me" target="_blank" class="social-icon wa">
+                        <img src="whatsapplogo.svg" alt="WhatsApp">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon ig">
+                        <img src="instagramlogo.svg" alt="Instagram">
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" class="social-icon tk">
+                        <img src="tiktoklogo.svg" alt="TikTok">
+                    </a>
+                </div>
+            </div>
+                <!-- Mapa de Google Maps Moderno e incrustado limpiamente -->
+                 <div class="map-container">
+                     <iframe 
+                        loading="lazy" 
+                        src="https://maps.google.com/maps?q=14.647212577796877%2C%20-90.57172139697607&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" 
+                        title="Ubicación Laboratorio Vidm S.A." 
+                        width="100%" 
+                        height="350" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+                <!-- Pie de Página Corporativo con Firma Camuflada -->
+        <footer style="background-color: #000000; color: #718096; text-align: center; padding: 25px 20px; font-size: 0.85rem; border-top: 1px solid #1e293b;">
+            <p style="margin: 0;">Copyright &copy; 2026 Laboratorio Vidm S.A. Todos los derechos reservados.</p>
+            
+            <p style="margin-top: 6px; color: #000000; font-size: 0.75rem; user-select: text;">
+                Desarrollado con Ingeniería de Software Modular por 
+                <a href="https://github.com" target="_blank" style="color: #000000; text-decoration: none; font-weight: bold;">
+                    XNGEL_S
+                </a> 
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

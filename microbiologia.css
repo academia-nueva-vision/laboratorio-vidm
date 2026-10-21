@@ -1,0 +1,218 @@
+/* Reset y estilos generales para la página de Microbiología */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Premium */
+.main-header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo-area {
+    display: flex !important;
+    flex-direction: row !important; /* Los fuerza a ponerse a la par */
+    align-items: center !important; /* Los centra verticalmente para que queden parejos */
+    gap: 15px !important;           /* Le da el espacio exacto de separación */
+}
+
+.site-logo {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain !important;
+}
+
+.logo-text h1 { font-size: 1.3rem; color: #0f2c59; }
+.logo-text p { font-size: 0.8rem; color: #718096; }
+.nav-links a { color: #4a5568; text-decoration: none; margin-left: 25px; font-weight: 600; }
+.nav-links .btn-nav { background-color: #0f2c59; color: white; padding: 8px 18px; border-radius: 4px; }
+
+/* Banner Superior de Entrada */
+.page-hero-micro {
+    background: linear-gradient(rgba(15, 44, 89, 0.85), rgba(15, 44, 89, 0.85));
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay-micro h2 { font-size: 2.2rem; margin-bottom: 8px; letter-spacing: 0.5px; }
+.hero-overlay-micro p { font-size: 1.05rem; color: #00b4d8; font-weight: 500; }
+
+/* Contenedor Principal */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Tarjeta Principal Contenedora */
+.micro-main-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eef2f5;
+    margin-bottom: 40px;
+}
+
+.micro-header h3 { color: #0f2c59; font-size: 1.7rem; margin-bottom: 8px; }
+.blue-line { width: 60px; height: 4px; background-color: #00b4d8; margin-bottom: 15px; border-radius: 2px; }
+.micro-header p { color: #627183; font-size: 1rem; margin-bottom: 35px; }
+
+/* Cuadrículas de Contenido */
+.micro-content-grid { display: flex; gap: 35px; flex-wrap: wrap; }
+.micro-list-box { flex: 1; min-width: 280px; }
+.micro-list-box h4 { color: #0f2c59; font-size: 1.25rem; margin-bottom: 20px; border-bottom: 2px solid #eef2f5; padding-bottom: 8px; }
+
+/* Estilos de las Listas Clásicas */
+.clean-list { list-style: none; }
+.clean-list li {
+    padding: 10px 12px;
+    background: #f8fafc;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    color: #334155;
+    font-weight: 500;
+    border-left: 3px solid #00b4d8;
+}
+
+/* Grilla Moderna de Tarjetas para las Bacterias */
+.microorganisms-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.microorganisms-list li {
+    background: #ffffff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #334155;
+    font-size: 0.92rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.microorganisms-list li:hover {
+    transform: translateY(-2px);
+    border-color: #00b4d8;
+    background-color: #f8fafc;
+}
+
+/* Pie de Página de la Subpágina */
+.micro-footer-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #eef2f5;
+}
+
+.contact-mini-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mini-info h4 { color: #0f2c59; margin-bottom: 5px; }
+.mini-info p { color: #627183; font-size: 0.9rem; }
+
+/* Barra de Redes Flotantes abajo */
+.social-buttons { display: flex; gap: 18px; }
+.social-icon img { width: 24px; height: 24px; object-fit: contain; transition: transform 0.2s; }
+.social-icon img:hover { transform: scale(1.15); }
+
+/* Tamaño controlado para la imagen del logo en el encabezado */
+.site-logo {
+    width: 50px;         /* Ajusta el ancho para que sea un círculo o cuadro compacto */
+    height: 50px;        /* Ajusta el alto del logo */
+    object-fit: contain; /* Evita que la imagen del laboratorio se estire o se deforme */
+    border-radius: 4px;  /* Le da esquinas suaves opcionales */
+}
+
+/* ==========================================================================
+   ESTILOS RESPONSIVOS PARA SUBPÁGINAS (MENÚ INTEGRADO EN CELULARES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Hace que el encabezado de las subpáginas se ordene hacia abajo */
+    .main-header {
+        position: static !important; /* Evita que flote encima del banner */
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px !important;
+        padding: 15px 20px !important;
+        width: 100% !important;
+    }
+
+    /* Organiza el logo y su texto centrados en vertical */
+    .logo-area {
+        flex-direction: column !important;
+        gap: 8px !important;
+        align-items: center !important;
+    }
+
+    /* Ajusta el tamaño de la letra del título del lab para que no rompa la pantalla */
+    .logo-text h1 {
+        font-size: 1.15rem !important;
+    }
+    
+    .logo-text p {
+        font-size: 0.75rem !important;
+    }
+
+    /* Pone los enlaces del menú uno debajo del otro de forma simétrica */
+    .nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .nav-links a {
+        margin: 0 !important;
+        font-size: 0.95rem !important;
+        padding: 6px 15px !important;
+        width: max-content !important; /* Se encoge al tamaño del texto */
+        text-align: center !important;
+    }
+
+    /* Deja el botón azul nítido y cómodo para tocar con el dedo */
+    .nav-links .btn-nav {
+        display: inline-block !important;
+        width: auto !important;
+        padding: 8px 25px !important;
+        color: white !important;
+    }
+
+    /* Ajustes para el Banner Azul de las subpáginas */
+    .page-hero-micro {
+        padding: 35px 15px !important; /* Menos espacio para que sea compacto en el móvil */
+    }
+
+    .hero-overlay-micro h2 {
+        font-size: 1.6rem !important; /* Letras un poco más pequeñas para que quepan completas */
+    }
+
+    .hero-overlay-micro p {
+        font-size: 0.9rem !important;
+    }
+}

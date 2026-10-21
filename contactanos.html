@@ -1,0 +1,84 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Cotizaciones | Laboratorio Vidm S.A.</title>
+    <!-- Reutilizamos tu CSS estrella para mantener los mismos cuadros nítidos -->
+    <link rel="stylesheet" href="microbiologia.css">
+</head>
+<body>
+
+    <!-- Encabezado Unificado -->
+    <header class="main-header">
+        <div class="logo-area">
+            <img src="logo.jpg" alt="Logo Laboratorio Vidm" class="site-logo">
+            <div class="logo-text">
+                <h1><a href="index.html" style="text-decoration: none; color: #0f2c59;">LABORATORIO VIDM S.A.</a></h1>
+                <p>Análisis Microbiológicos y Fisicoquímicos para la Industria</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="index.html#analisis">Servicios</a>
+        </nav>
+    </header>
+
+    <!-- Banner Corporativo de Contacto -->
+    <section class="page-hero-micro" style="background: linear-gradient(rgba(15, 44, 89, 0.85), rgba(15, 44, 89, 0.85));">
+        <div class="hero-overlay-micro">
+            <h2>Centro de Atención y Solicitudes</h2>
+            <p>Por favor, seleccione el departamento adecuado para agilizar su respuesta.</p>
+        </div>
+    </section>
+
+    <!-- Contenedor Principal con Dos Formularios Separados -->
+    <main class="container">
+        <div class="micro-content-grid" style="display: flex; gap: 30px; flex-wrap: wrap;">
+            
+            <!-- FORMULARIO 1: ATENCIÓN E INFORMACIÓN GENERAL (info@) -->
+            <div class="micro-list-box" style="flex: 1; min-width: 300px; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04); border: 1px solid #eef2f5; border-top: 5px solid #00b4d8;">
+                <h3 style="color: #0f2c59; margin-bottom: 5px; font-size: 1.4rem;">ℹ️ Información General</h3>
+                <p style="color: #718096; font-size: 0.85rem; margin-bottom: 20px;">Dudas sobre horarios, estado de muestras o consultas administrativas generales.</p>
+                
+                <form action="https://script.google.com/macros/s/AKfycbwU9AQSylRAjUw8fZCj1ClavMlte1guzMhJRyVaZhO2YSZGl_aoBOyvM0omSAp8euFc/exec" method="POST" class="dynamic-form" style="display: flex; flex-direction: column; gap: 12px;">
+                    <!-- Campo oculto para decirle a la app de googlescript a qué correo enviarlo en el futuro -->
+                    <input type="hidden" name="_to" value="info@labvidm.com.gt">
+                    
+                    <input type="text" name="empresa" placeholder="Nombre completo o Empresa" style="width:100%; padding:10px; border-radius:6px; border:1px solid #cbd5e1;" required>
+                    <input type="email" name="_replyto" placeholder="Su Correo Electrónico" style="width:100%; padding:10px; border-radius:6px; border:1px solid #cbd5e1;" required>
+                    <input type="tel" name="telefono" placeholder="Número de Teléfono / WhatsApp" style="width:100%; padding:10px; border-radius:6px; border:1px solid #cbd5e1;" required>
+                    <textarea name="mensaje" placeholder="Escriba su consulta para el área de soporte..." rows="4" style="width:100%; padding:10px; border-radius:6px; border:1px solid #cbd5e1;" required></textarea>
+                    
+                    <button type="submit" style="background-color: #00b4d8; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 10px;">Enviar a Soporte / Info</button>
+                </form>
+            </div>
+
+            <!-- FORMULARIO 2: DEPARTAMENTO DE VENTAS Y COTIZACIONES (ventas@) -->
+            <div class="micro-list-box" style="flex: 1; min-width: 300px; background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04); border: 1px solid #eef2f5; border-top: 5px solid #0f2c59;">
+                <h3 style="color: #0f2c59; margin-bottom: 5px; font-size: 1.4rem;">💼 Ventas y Cotizaciones</h3>
+                <p style="color: #718096; font-size: 0.85rem; margin-bottom: 20px;">Solicitudes de precios para análisis industriales, contratos o requerimientos comerciales.</p>
+                
+                <form action="https://script.google.com/macros/s/AKfycbwU9AQSylRAjUw8fZCj1ClavMlte1guzMhJRyVaZhO2YSZGl_aoBOyvM0omSAp8euFc/exec" method="POST" class="dynamic-form" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input type="hidden" name="_to" value="ventas@labvidm.com.gt">
+                    
+                    <input type="text" name="empresa" placeholder="Nombre de la Fábrica o Empresa" style="width:100%; padding:10px; border-radius:6px; border:1px solid #cbd5e1;" required>
+                    <input type="email" name="_replyto" placeholder="Correo Electrónico Corporativo" style="width:100%; padding:10px; border-radius:6px; border:1px solid #cbd5e1;" required>
+                    <input type="tel" name="telefono" placeholder="Número de Teléfono / WhatsApp" style="width:100%; padding:10px; border-radius:6px; border:1px solid #cbd5e1;" required>
+                    <textarea name="mensaje" placeholder="Detalle los análisis que requiere cotizar (Microbiología, Aguas residuales, etc.)..." rows="4" style="width:100%; padding:10px; border-radius:6px; border:1px solid #cbd5e1;" required></textarea>
+                    
+                    <button type="submit" style="background-color: #0f2c59; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; margin-top: 10px;">Solicitar Cotización de Ventas</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bloque de datos físicos al final -->
+        <section class="micro-footer-section" style="margin-top: 40px; text-align: center;">
+            <p style="color: #4a5568; margin-bottom: 5px;">📍 11 avenida 3-39 zona 4, Colonia Monte Real II, Mixco, Guatemala.</p>
+            <p style="color: #718096; font-size: 0.9rem;">⏰ 07:00 a.m. – 04:00 p.m. (Lunes – Viernes)</p>
+        </section>
+    </main>
+
+</body>
+</html>

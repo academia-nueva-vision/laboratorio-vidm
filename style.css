@@ -1,0 +1,415 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Estilo Clínico Premium */
+.main-header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.site-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.logo-text h1 {
+    font-size: 1.3rem;
+    color: #0f2c59; /* Azul oscuro corporativo */
+    letter-spacing: 0.5px;
+}
+
+.logo-text p {
+    font-size: 0.8rem;
+    color: #718096;
+}
+
+/* Menú de Navegación */
+.nav-links a {
+    color: #4a5568;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #00b4d8; /* Celeste médico */
+}
+
+.nav-links .btn-nav {
+    background-color: #0f2c59;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+.nav-links .btn-nav:hover {
+    background-color: #00b4d8;
+    color: white;
+}
+
+/* Banner Hero con Filtro Oscuro */
+.hero-banner {
+    background: linear-gradient(rgba(15, 44, 89, 0.75), rgba(15, 44, 89, 0.75)), url('20220104_150311-scaled_003_xgf8.webp') no-repeat center center/cover;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.hero-overlay p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #e2e8f0;
+}
+
+.btn-hero {
+    background-color: #00b4d8;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-hero:hover {
+    background-color: #0077b6;
+}
+
+/* Secciones y Contenedores */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #0f2c59;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-title-left {
+    font-size: 2rem;
+    color: #0f2c59;
+    margin-bottom: 20px;
+}
+
+/* Tarjetas de Servicios Estilizadas con Toque Premium */
+.services-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 12px; /* Esquinas más suaves y modernas */
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra difuminada muy elegante */
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    border: 1px solid #eef2f5;
+}
+
+/* Efecto de elevación interactivo (Hover) */
+.service-card:hover {
+    transform: translateY(-8px); /* Eleva la tarjeta suavemente */
+    box-shadow: 0 12px 30px rgba(15, 44, 89, 0.12); /* Intensifica la sombra con un toque azul */
+}
+
+.service-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover; /* Hace que la foto se adapte sin deformarse */
+    border-bottom: 3px solid #00b4d8; /* Línea celeste médica divisoria */
+}
+
+.card-content {
+    padding: 24px; /* Un poco más de espacio interno para que respire el diseño */
+}
+
+.card-content h4 {
+    color: #0f2c59; /* Azul oscuro clínico premium */
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.card-content p {
+    color: #627183; /* Gris corporativo suave y fácil de leer */
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+/* Sección Quiénes Somos (Alineación horizontal) */
+.about-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text, .about-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Grilla para el contacto y el mapa */
+.contact-grid {
+    display: flex;
+    gap: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    flex-wrap: wrap;
+}
+
+.contact-info, .map-container {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-info h4 {
+    color: #0f2c59;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.map-container {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+/* Contenedor horizontal para los íconos */
+.social-buttons {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; /* Más espacio entre ellos ya que no tienen caja */
+    margin-top: 15px;
+}
+
+/* El botón transparente y limpio */
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+/* Ajuste del tamaño de tus SVG */
+.social-icon img {
+    width: 50px; /* Un pelín más grandes para que resalten */
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Efecto sutil al pasar el mouse por encima */
+.social-icon:hover {
+    transform: scale(1.15); /* Crece un poquito de tamaño de forma fluida */
+}
+
+/* ==========================================================================
+   BLOQUE RESPONSIVE DEFINITIVO: UNIFICADO Y CON MÁXIMA PRIORIDAD
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+        /* 1. Cabecera y Menú Superior con Desplazamiento Fluido */
+    .main-header {
+        position: absolute !important; /* Flota sobre el fondo de forma ligera */
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px !important;
+        padding: 20px !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease !important;
+    }
+
+    .logo-area {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    .logo-text h1 {
+        font-size: 1.2rem !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .nav-links a {
+        margin: 0 !important; 
+        font-size: 0.95rem !important;
+        padding: 6px 15px !important;
+        width: max-content !important; /* Evita que se estiren al ancho completo */
+        text-align: center !important;
+        border-radius: 4px !important;
+    }
+
+    .nav-links .btn-nav {
+        display: inline-block !important;
+        width: auto !important;
+        padding: 8px 25px !important;
+    }
+
+    /* 2. Banner Hero Principal */
+    .hero-overlay h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-overlay p {
+        font-size: 0.95rem !important;
+    }
+
+    /* 3. Tarjetas de Servicios de Análisis */
+    .services-grid {
+        padding: 20px 15px !important; /* Deja márgenes estéticos a los lados */
+        gap: 20px !important;
+        display: flex !important;
+        flex-direction: column !important; /* Las apila una debajo de otra */
+    }
+
+    .service-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .card-content {
+        padding: 20px 15px !important;
+    }
+    
+    .card-content h4 {
+        font-size: 1.15rem !important;
+    }
+
+    /* 4. Sección de Ubicación, Contacto y Mapa */
+    .contact-grid {
+        display: flex !important;
+        flex-direction: column !important; /* Apila datos arriba y mapa abajo */
+        gap: 25px !important;
+        padding: 20px 15px !important;
+        width: 100% !important;
+    }
+
+    .contact-info {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .contact-info p {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 8px !important;
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .contact-info h4 {
+        font-size: 1.1rem !important;
+        color: #0f2c59 !important;
+        margin-top: 15px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .contact-info .social-buttons {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        margin-top: 20px !important;
+        width: 100% !important;
+    }
+
+    .map-container {
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    .map-container iframe {
+        width: 100% !important;
+        height: 280px !important;
+        border-radius: 8px !important;
+    }
+        /* Empuja las tarjetas de servicios hacia abajo para que el menú absolute no las tape */
+    .services-grid, #analisis {
+        margin-top: 100px !important; /* El espacio exacto para que respire el título */
+    }
+
+}
