@@ -80,7 +80,7 @@ body {
 
 /* Banner Hero con Filtro Oscuro */
 .hero-banner {
-    background: linear-gradient(rgba(15, 44, 89, 0.75), rgba(15, 44, 89, 0.75)), url('20220104_150311-scaled_003_xgf8.webp') no-repeat center center/cover;
+    background: linear-gradient(rgba(15, 44, 89, 0.75), rgba(15, 44, 89, 0.75)), url('bannerlog.png') no-repeat center center/cover;
     height: 45vh;
     display: flex;
     align-items: center;
@@ -275,30 +275,32 @@ body {
 .social-icon:hover {
     transform: scale(1.15); /* Crece un poquito de tamaño de forma fluida */
 }
-
+/* ==========================================================================
+   BLOQUE RESPONSIVE DEFINITIVO: UNIFICADO Y CON MÁXIMA PRIORIDAD
+   ========================================================================== */
 /* ==========================================================================
    BLOQUE RESPONSIVE DEFINITIVO: UNIFICADO Y CON MÁXIMA PRIORIDAD
    ========================================================================== */
 @media (max-width: 768px) {
     
-        /* 1. Cabecera y Menú Superior con Desplazamiento Fluido */
+    /* 1. Cabecera y Menú Superior con Desplazamiento Fluido */
     .main-header {
-        position: absolute !important; /* Flota sobre el fondo de forma ligera */
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
+        position: relative !important; /* MÁGICO: Deja espacio real para el banner en celulares */
         flex-direction: column !important;
         text-align: center !important;
         gap: 15px !important;
         padding: 20px !important;
         background-color: #ffffff !important;
         box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+        
+        /* Mantenemos tus animaciones suaves e independientes */
         transition: transform 0.4s ease-in-out, opacity 0.3s ease !important;
     }
 
     .logo-area {
         flex-direction: column !important;
         gap: 8px !important;
+        align-items: center !important;
     }
 
     .logo-text h1 {
@@ -318,7 +320,7 @@ body {
         margin: 0 !important; 
         font-size: 0.95rem !important;
         padding: 6px 15px !important;
-        width: max-content !important; /* Evita que se estiren al ancho completo */
+        width: max-content !important; 
         text-align: center !important;
         border-radius: 4px !important;
     }
@@ -329,21 +331,52 @@ body {
         padding: 8px 25px !important;
     }
 
-    /* 2. Banner Hero Principal */
+    /* 2. Banner Hero Principal Corregido y 100% Visible */
+    .hero-banner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: auto !important; 
+        min-height: 220px !important; /* Altura perfecta para el fondo con guantes en celular */
+        padding: 40px 20px !important;
+        margin-top: 0 !important;
+    }
+
     .hero-overlay h2 {
-        font-size: 1.8rem !important;
+        font-size: 1.4rem !important; 
+        margin-bottom: 8px !important;
+        color: white !important;
     }
     
     .hero-overlay p {
-        font-size: 0.95rem !important;
+        font-size: 0.88rem !important;
+        margin-bottom: 15px !important;
+        color: white !important;
     }
 
-    /* 3. Tarjetas de Servicios de Análisis */
+    .btn-hero {
+        display: inline-block !important; /* Fuerza a que el botón celeste se dibuje */
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
+        background-color: #00b4d8 !important;
+        color: white !important;
+        text-decoration: none !important;
+        border-radius: 4px !important;
+        font-weight: bold !important;
+    }
+
+    /* 3. Tarjetas de Servicios de Análisis (Ajuste Fluyente) */
     .services-grid {
-        padding: 20px 15px !important; /* Deja márgenes estéticos a los lados */
+        padding: 20px 15px !important; 
         gap: 20px !important;
         display: flex !important;
-        flex-direction: column !important; /* Las apila una debajo de otra */
+        flex-direction: column !important; 
+        margin-top: 20px !important; /* Separación estética e independiente del banner */
+    }
+
+    #analisis {
+        margin-top: 0 !important; /* Remueve bloqueos rígidos viejos */
     }
 
     .service-card {
@@ -362,7 +395,7 @@ body {
     /* 4. Sección de Ubicación, Contacto y Mapa */
     .contact-grid {
         display: flex !important;
-        flex-direction: column !important; /* Apila datos arriba y mapa abajo */
+        flex-direction: column !important; 
         gap: 25px !important;
         padding: 20px 15px !important;
         width: 100% !important;
@@ -407,9 +440,4 @@ body {
         height: 280px !important;
         border-radius: 8px !important;
     }
-        /* Empuja las tarjetas de servicios hacia abajo para que el menú absolute no las tape */
-    .services-grid, #analisis {
-        margin-top: 100px !important; /* El espacio exacto para que respire el título */
-    }
-
 }
